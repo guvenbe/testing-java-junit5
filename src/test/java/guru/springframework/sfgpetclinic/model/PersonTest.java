@@ -12,7 +12,7 @@ class PersonTest {
         //then
         assertAll("Test Props Set",
                 () -> assertEquals("Joe", person.getFirstName(), "first name failed"),
-                () -> assertEquals("Black", person.getLastName(),"lastn name failed")
+                () -> assertEquals("Black", person.getLastName(),"last name failed")
 
         );
 
