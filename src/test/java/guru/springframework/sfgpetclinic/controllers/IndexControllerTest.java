@@ -82,10 +82,16 @@ class IndexControllerTest {
     void testMeOnWindows() {
     }
 
+    @EnabledOnOs(OS.LINUX)
+    @Test
+    void testMeOnLinux() {
+    }
+
     @EnabledOnJre(JRE.JAVA_8)
     @Test
     void testMeOnJava8() {
     }
+
 
     @EnabledOnJre(JRE.JAVA_11)
     @Test
@@ -97,8 +103,8 @@ class IndexControllerTest {
     void testIfUserJT() {
     }
 
-    @EnabledIfEnvironmentVariable(named = "USER", matches = "fred")
+    @EnabledIfEnvironmentVariable(named = "USER", matches = "vagrant")
     @Test
-    void testIfUserFred() {
+    void testIfUserVagrant() {
     }
 }
