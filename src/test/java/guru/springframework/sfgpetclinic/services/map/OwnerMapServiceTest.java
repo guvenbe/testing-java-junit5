@@ -44,6 +44,7 @@ class OwnerMapServiceTest {
             PetType petType2 = new PetType(2L, "Cat");
             petTypeService.save(petType);
             petTypeService.save(petType2);
+            System.out.println("First before each");
         }
 
         @DisplayName("Test Pet Count")
@@ -61,6 +62,7 @@ class OwnerMapServiceTest {
             @BeforeEach
             void setUp() {
                 ownerMapService.save(new Owner(1L, "Before", "Each"));
+                System.out.println("Second before each");
             }
 
             @DisplayName("Save Owner")
@@ -76,6 +78,10 @@ class OwnerMapServiceTest {
             @DisplayName("Save Owners Tests - ")
             @Nested
             class FindOwnersTests {
+                @BeforeEach
+                void setup(){
+                    System.out.println("Third before each");
+                }
 
                 @DisplayName("Find Owner")
                 @Test
